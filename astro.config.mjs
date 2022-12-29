@@ -8,7 +8,8 @@ import webmanifest from 'astro-webmanifest';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jacagi.github.io/astro-blog",
+  site: 'https://jacagi.github.io',
+  base: '/astro-blog',
   experimental: {
     integrations: true,
   },
@@ -50,8 +51,3 @@ export default defineConfig({
     }
   }
 });
-
-export default defineConfig({
-  site: 'https://jacagi.github.io',
-  base: '/astro-blog',
-})
