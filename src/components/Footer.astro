@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-import { SITE_TITLE } from "../config";
+import { SITE_TITLE, BASE_PATH } from "../config";
 
 const currentYear = new Date().getFullYear();
 ---
@@ -12,15 +12,15 @@ const currentYear = new Date().getFullYear();
         <div class="flex flex-row mb-2">
           <a
             class="mr-2 hover:text-red-500 dark:text-white dark:hover:text-red-500"
-            href="/">Inicio</a
+            href={`${BASE_PATH}/`}>Inicio</a
           >
           <a
             class="mr-2 hover:text-red-500 dark:text-white dark:hover:text-red-500"
-            href="/posts">Blog</a
+            href={`${BASE_PATH}/posts`}>Blog</a
           >
           <a
             class="mr-2 hover:text-red-500 dark:text-white dark:hover:text-red-500"
-            href="/about">Sobre mi</a
+            href={`${BASE_PATH}/about`}>Sobre mi</a
           >
         </div>
         <div>
@@ -29,7 +29,7 @@ const currentYear = new Date().getFullYear();
       </div>
       <div class="basis-1/4 justify-end flex flex-row">
         <a
-          href="/rss.xml"
+          href={`${BASE_PATH}/rss.xml`}
           class="ml-4 hover:text-red-500 dark:text-white dark:hover:text-red-500"
           aria-label="rss"
           rel="noopener"

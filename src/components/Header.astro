@@ -1,10 +1,10 @@
 ---
 import Icon from "astro-icon";
-import { SITE_TITLE } from "../config";
+import { SITE_TITLE,BASE_PATH } from "../config";
 ---
 
 <header class="mb-4 flex flex-row justify-between">
-	<a href="/">
+	<a href={`${BASE_PATH}/`}>
 		<h1
 			class="uppercase font-bold text-red-500 hover:text-red-700 text-3xl"
 		>
