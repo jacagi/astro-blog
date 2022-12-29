@@ -1,0 +1,63 @@
+---
+import { Icon } from "astro-icon";
+import { SITE_TITLE } from "../config";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <div class="mb-3 mt-4">
+    <div class="flex flex-row">
+      <div class="basis-3/4 text-left">
+        <div class="flex flex-row mb-2">
+          <a
+            class="mr-2 hover:text-red-500 dark:text-white dark:hover:text-red-500"
+            href="/">Inicio</a
+          >
+          <a
+            class="mr-2 hover:text-red-500 dark:text-white dark:hover:text-red-500"
+            href="/posts">Blog</a
+          >
+          <a
+            class="mr-2 hover:text-red-500 dark:text-white dark:hover:text-red-500"
+            href="/about">Sobre mi</a
+          >
+        </div>
+        <div>
+          &copy; {currentYear} {SITE_TITLE}.
+        </div>
+      </div>
+      <div class="basis-1/4 justify-end flex flex-row">
+        <a
+          href="/rss.xml"
+          class="ml-4 hover:text-red-500 dark:text-white dark:hover:text-red-500"
+          aria-label="rss"
+          rel="noopener"
+        >
+          <Icon name="fa:feed" />
+        </a>
+        <a
+          href="#"
+          class="ml-4 hover:text-red-500 dark:text-white dark:hover:text-red-500"
+          aria-label="Email"
+          rel="noopener"
+        >
+          <Icon name="fa-solid:envelope" />
+        </a>
+        <a
+          href="#"
+          class="ml-4 hover:text-red-500 dark:text-white dark:hover:text-red-500"
+          aria-label="Github"
+          rel="noopener"
+        >
+          <Icon name="fa-brands:github" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+  [astro-icon] {
+    height: 24px;
+  }
+</style>

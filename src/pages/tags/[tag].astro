@@ -1,0 +1,18 @@
+---
+import { mapPosts } from "../../utils/post.utils";
+import TagsLayout from "../../layouts/TagsLayout.astro";
+
+const { tag } = Astro.params;
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = await Astro.glob("../posts/*.{md,mdx}");
+const mappedPosts = mapPosts(posts);
+
+export function getStaticPaths() {
+	return [
+		{ params: { tag: "general" } },
+	];
+}
+---
+
+<TagsLayout posts={mappedPosts} tag={tag} />
