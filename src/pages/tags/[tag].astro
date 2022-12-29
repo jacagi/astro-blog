@@ -11,6 +11,9 @@ const mappedPosts = mapPosts(posts);
 export function getStaticPaths() {
 	return [
 		{ params: { tag: "general" } },
+		{ params: { tag: "tech" } },
+		{ params: { tag: "food" } },
+		{ params: { tag: "science" } },
 	];
 }
 ---
